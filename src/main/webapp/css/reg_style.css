@@ -1,0 +1,184 @@
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+        -45deg, 
+        rgba(59,173,227,1) 0%, 
+        rgba(87,111,230,1) 25%, 
+        rgba(152,68,183,1) 51%, 
+        rgba(255,53,127,1) 100%
+  );  
+  animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+
+#container {
+  width: 900px;
+  margin: 25px auto;
+  margin-top: 50px;
+}
+.whysign {
+  float: left;
+  background-color: rgb(244, 182, 74);
+  width: 480px;
+  height: 519px;
+  border-radius: 0 5px 5px 0;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.whysignLogin
+{
+  float: left;
+  background-color: white;
+  width: 480px;
+  height: 347px;
+  border-radius: 0 5px 5px 0;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.whyforgotPassword
+{
+	float: left;
+  background-color: white;
+  width: 480px;
+  height: 470px;
+  border-radius: 0 5px 5px 0;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.signup {
+    float: left;
+    width: 300px;
+    padding: 0px 20px;
+    background-color: #E2C1B8;
+    text-align: -webkit-center;
+}
+[type=text],[type=email],[type=number],[type=password],select,option {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  border: 20;
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  height: 50px;
+  line-height: 45px;  
+  margin-bottom: 15px;
+  font-size: 1em;
+  color: #004080;
+}
+[type=submit] {
+  margin-top: 7px;
+  width: 60%;
+  border: 0;
+  background-color: #D93BD4;
+  border-radius: 8px;
+  height: 50px;
+  color: blanchedalmond;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+[type='text']:focus {
+  outline: none;
+  border-color: #53CACE;
+}
+h1 {
+  color: red;
+  font-weight: 900;
+  font-size: 2.5em;
+}
+h2 {
+  color: #E66038;
+  font-weight: 900;
+  font-size: 2.5 em;
+}
+p {
+  color: #420340;
+  font-size: 1.2em;
+  margin: 50px 0 50px 0;
+}
+span {
+  font-size: .75em;
+  background-color: white;
+  padding: 2px 5px;
+  color: rgba(0,0,0,.6);
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  margin: 5px;
+}
+span:hover {
+  color: #53CACE;
+}
+p:nth-of-type(2) {
+  font-size: 1em;
+}
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
